@@ -1,0 +1,16 @@
+pip install django
+django-admin startproject core .
+
+python manage.py startapp accounts apps/accounts
+
+python manage.py startapp profiles apps/profiles
+
+
+py manage.py makemigrations
+py manage.py migrate
+
+
+
+
+
+pip install django-filter
