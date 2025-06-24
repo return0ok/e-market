@@ -14,3 +14,6 @@ py manage.py migrate
 
 
 pip install django-filter
+
+
+pip freeze > requirements.txt
