@@ -14,6 +14,8 @@ py manage.py migrate
 
 
 pip install django-filter
+pip install django-cors-headers
 
 
 pip freeze > requirements.txt
+
