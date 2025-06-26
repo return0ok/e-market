@@ -44,3 +44,4 @@ class IsDeletedModel(BaseModel):
 
     def hard_delete(self, *args, **kwargs):
         super().delete(*args, **kwargs)
+

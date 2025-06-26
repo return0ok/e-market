@@ -159,6 +159,8 @@ REST_FRAMEWORK = {
         'user': '1000/day', # ограничения для авторизованных пользователей
     },
     'DEFAULT_VERSIONING_CLASS': 'apps.versions.HeaderVersioning',
+    'ALLOWED_VERSIONS': ['1.0', '2.0'],
+    'DEFAULT_VERSION': '1.0',
 
 }
 

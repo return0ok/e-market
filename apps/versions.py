@@ -3,7 +3,7 @@ from rest_framework.versioning import BaseVersioning
 class HeaderVersioning(BaseVersioning):
     version_param = 'version'
     default_version = '1.0'
-    print("TESTtttttttttttttttttttt")
+    # print("TESTtttttttttttttttttttt")
 
     def determine_version(self, request, *args, **kwargs):
         header_version = request.headers.get('X-API-Version')
@@ -18,3 +18,13 @@ class HeaderVersioning(BaseVersioning):
             print(header_version)
         return self.default_version
         print(header_version)
+
+class QueryParameterVersioning(BaseVersioning):
+    version_param = 'version'  # Параметр, в котором передается версия (может быть 'v' или любой другой)
+    default_version = '1'
+
+    def determine_version(self, request, *args, **kwargs):
+        version = request.query_params.get(self.version_param)
+        if version:
+            return version
+        return self.default_version
